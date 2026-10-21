@@ -1,109 +1,129 @@
-<!doctype html>
-<html lang="en">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="theme-color" content="#ffe27a">
-<title>Martina's Little World 💖</title>
-<style>
-:root{--pink:#ff6fae;--purple:#8b6cff;--yellow:#ffe27a;--mint:#58d6c5;--teal:#087f8c;--ink:#263b4a;--paper:#fffaff;--card:#ffffffdf}
-*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:ui-rounded,"Trebuchet MS",system-ui,sans-serif;color:var(--ink);background:radial-gradient(circle at 10% 5%,#ffe5f1 0,transparent 30%),radial-gradient(circle at 95% 20%,#e5ddff 0,transparent 28%),linear-gradient(135deg,#fff3b8,#fff0f7 46%,#d8fbf5);min-height:100vh}
-button,input,textarea{font:inherit}button{cursor:pointer;touch-action:manipulation;border:0;border-radius:16px;padding:12px 16px;font-weight:800;color:var(--ink);background:linear-gradient(135deg,#ffe27a,#ffb6d8);box-shadow:0 5px 0 #e5a4c3;transition:transform .12s}button:active{transform:translateY(3px);box-shadow:0 2px 0 #e5a4c3}button.secondary{background:#eee8ff;box-shadow:0 4px 0 #c9baff}button.mint{background:#8be7dc;box-shadow:0 4px 0 #329f9b}button.small{padding:8px 11px;font-size:.9rem}
-a{color:#087f8c}header{max-width:1100px;margin:auto;padding:22px 18px 10px;display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}.brand{font-weight:1000;letter-spacing:-.04em;font-size:1.15rem}.pill{background:#ffffffb8;border:1px solid #fff;border-radius:999px;padding:8px 12px;font-size:.85rem;font-weight:800}
-main{max-width:1100px;margin:auto;padding:12px 18px 60px}.hero{padding:32px 22px 28px;text-align:center;border:2px solid #fff;border-radius:32px;background:linear-gradient(135deg,#ffffffd9,#fff5fbdd);box-shadow:0 15px 40px #9b76bd20;position:relative;overflow:hidden}.sparkle{font-size:1.5rem}.hero h1{font-size:clamp(2.25rem,9vw,4.8rem);line-height:1;margin:12px 0;color:#087f8c;letter-spacing:-.06em}.hero p{font-size:1.05rem;max-width:590px;margin:14px auto 20px;line-height:1.6}.hero .actions{display:flex;justify-content:center;gap:10px;flex-wrap:wrap}
-nav{display:flex;gap:8px;overflow-x:auto;padding:16px 0 10px;scrollbar-width:thin}nav button{white-space:nowrap;background:#fff9;box-shadow:none;border:1px solid #fff;padding:10px 14px}nav button.active{background:#087f8c;color:#fff}
-section{scroll-margin-top:15px;margin-top:22px}.section-title{display:flex;align-items:center;gap:10px;margin:0 0 13px;font-size:1.55rem;letter-spacing:-.04em}.section-title span{font-size:1.6rem}.grid{display:grid;grid-template-columns:repeat( auto-fit,minmax(min(100%,245px),1fr));gap:14px}.card{background:var(--card);border:1.5px solid #fff;border-radius:24px;padding:19px;box-shadow:0 10px 25px #7654a511;min-width:0}.card h3{margin:4px 0 8px;font-size:1.12rem}.card p{line-height:1.5;margin:7px 0 13px}.emoji{font-size:2rem}.muted{opacity:.76;font-size:.92rem}.result{margin-top:12px;background:#fff5d8;border-radius:15px;padding:12px;line-height:1.5;min-height:44px}.field{width:100%;border:2px solid #eadcf9;border-radius:13px;padding:12px;background:#fff;margin:6px 0 10px;color:var(--ink)}textarea.field{min-height:100px;resize:vertical}.button-row{display:flex;gap:8px;flex-wrap:wrap}.choice-list{display:grid;gap:8px;margin:10px 0}.choice-list button{text-align:left;background:#f5efff;box-shadow:none;border:2px solid transparent}.choice-list button:hover,.choice-list button:focus{border-color:#9c7cff}.memory{border-left:5px solid var(--teal);padding:10px 12px;background:#fff7fb;border-radius:0 13px 13px 0;margin:8px 0}.tiny{font-size:.82rem}.footer{text-align:center;padding:28px 10px;color:#705b82}.heart{display:inline-block;animation:beat 1.3s infinite}@keyframes beat{50%{transform:scale(1.2)}}.pet-room{background:linear-gradient(135deg,#c8f7ed,#fff0a8);border-radius:20px;padding:18px;text-align:center;min-height:185px;display:grid;place-items:center}.pet{font-size:4.2rem;filter:drop-shadow(0 6px 3px #5c4b8822)}.hide{display:none!important}.note{font-size:.84rem;background:#f4edff;padding:10px;border-radius:12px}.success{color:#23775f;font-weight:800}
-@media(min-width:720px){.hero{padding:48px 30px}.hero p{font-size:1.15rem}.card{padding:22px}}
-@media(prefers-reduced-motion:reduce){*{animation:none!important;scroll-behavior:auto!important;transition:none!important}}
-</style>
-</head>
-<body>
-<header><div class="brand">🌈 Martina's Little World</div><div class="pill">yellow sunshine for you ☀️ · teal for us 💚</div></header>
-<main>
-<div class="hero">
- <div class="sparkle">✨ 🦋 🌷 ✨</div>
- <h1>Hi, Martina, beba! 💛</h1>
- <p>A little corner of the internet made with love for you, beba — full of tiny adventures, sweet memories, secret notes and reminders that you are so loved.</p>
- <div class="actions"><button onclick="goTo('play')">🎮 Let's play</button><button class="secondary" onclick="goTo('love-notes')">💌 Find a little note</button></div>
- <p class="tiny muted">Made especially for you. Explore at your own pace ✨</p>
-</div>
-<nav aria-label="Website sections">
-<button class="active" onclick="goTo('play',this)">🎮 Games</button><button onclick="goTo('mystery',this)">🕵️ Mystery</button><button onclick="goTo('memories',this)">📸 Memories</button><button onclick="goTo('love-notes',this)">💌 Secret notes</button><button onclick="goTo('croatian',this)">🇭🇷 Croatian</button><button onclick="goTo('boredom',this)">🎲 Boredom</button><button onclick="goTo('world',this)">🌍 My world</button>
-</nav>
-<section id="play">
-<h2 class="section-title"><span>🎮</span> Play corner</h2>
-<div class="grid">
- <article class="card"><div class="emoji">💘</div><h3>How well do you know your person?</h3><p class="muted">A cute little relationship quiz.</p><div id="quiz-question"></div><div class="choice-list" id="quiz-choices"></div><div class="result" id="quiz-result" aria-live="polite">Ready when you are! 💗</div><div class="button-row" style="margin-top:10px"><button onclick="startQuiz()">Start / next question</button></div></article>
- <article class="card"><div class="emoji">🧠</div><h3>Emoji memory</h3><p>Remember this little sequence, then type it back using the emojis.</p><div class="result" id="memory-sequence">Tap “Show sequence” to begin.</div><input class="field" id="memory-answer" placeholder="Type the emojis here" aria-label="Emoji sequence answer"><div class="button-row"><button class="mint" onclick="showSequence()">Show sequence</button><button class="secondary" onclick="checkSequence()">Check</button></div><div class="result" id="memory-result" aria-live="polite"></div></article>
- <article class="card"><div class="emoji">🍀</div><h3>Pick a lucky door</h3><p>Three doors. One has a tiny surprise. Choose one!</p><div class="button-row"><button onclick="door(0)">🚪 1</button><button onclick="door(1)">🚪 2</button><button onclick="door(2)">🚪 3</button></div><div class="result" id="door-result" aria-live="polite">Your adventure awaits…</div></article>
-</div>
-</section>
-<section id="mystery">
-<h2 class="section-title"><span>🕵️</span> The tiny mystery room</h2>
-<div class="card"><div class="emoji">🔎</div><h3>The case of the missing cupcake</h3><p>A cupcake vanished from the kitchen. Three suspects were nearby. Read the clues and solve the case!</p>
-<div class="memory"><b>Clue 1:</b> Mia was outside watering flowers — and her shoes were muddy.</div><div class="memory"><b>Clue 2:</b> Leo was in the living room. There are crumbs on the sofa, but they are biscuit crumbs.</div><div class="memory"><b>Clue 3:</b> Poppy the puppy has pink icing on her nose and is hiding behind the table.</div>
-<p><b>Who took the cupcake?</b></p><div class="choice-list"><button onclick="mystery('Mia')">🌷 Mia</button><button onclick="mystery('Leo')">🧢 Leo</button><button onclick="mystery('Poppy')">🐶 Poppy</button></div><div id="mystery-result" class="result" aria-live="polite"></div><button class="secondary small" onclick="document.getElementById('mystery-result').textContent='Case closed: Poppy is the cupcake bandit! The pink icing gave her away. 🐾'">Reveal answer</button></div>
-</section>
-<section id="memories">
-<h2 class="section-title"><span>📸</span> Our memory jar — our always, all ways</h2>
-<div class="grid"><div class="card"><h3>Little things worth keeping</h3><p class="muted">Add your own favourite memories. These stay saved in this browser on this device.</p><input id="memory-title" class="field" placeholder="Memory title (e.g. Our silly day)"><textarea id="memory-text" class="field" placeholder="Write what you want to remember…"></textarea><button onclick="addMemory()">Add to the jar 💗</button><div id="saved-memories" style="margin-top:12px"></div></div>
-<div class="card"><div class="emoji">💛🩵</div><h3>For my beba — our little story</h3><p>Beba, I want us to keep the little things too: the laughs, the silly moments, the deep, intense moments we share, our crazy make-out sessions, and the ordinary days that feel brighter because we share them. You matter to me in ways that are hard to fit into one message.</p><p>Yellow is your sunshine, teal is my little touch, and this tiny world is a place to keep adding pieces of our story. 💛</p><div class="note">✨ Memory ideas: a moment that made you laugh, a song that reminds you of each other, a time you felt cared for, or something you can’t wait to do together. Add your real memories in the jar.</div></div>
-<div class="card"><div class="emoji">🎮💣😂</div><h3>The Fortnite boogy-bomb era</h3><p>Remember when we used to throw boogy bombs at each other in Fortnite? 😂 Such a silly little memory, but it’s ours — the kind of ridiculous moment that still belongs in our story. If love had a highlight reel, this would absolutely make the cut.</p><div class="memory"><b>Our Bali chapter 🌴</b><br>Our three-month anniversary in Bali — a little milestone in a place that will always mean something special in our story.</div><div class="memory"><b>Always. All ways. 💛🩵</b><br>Two little words that say so much. Not just always when life is easy, but all ways: in the laughter, the hard days, the growing, the choosing each other, and every version of the future we build together.</div></div>
-<div class="card"><div class="emoji">💍🤍</div><h3>The future I dream of with you</h3><p>One day, I dream of meeting you halfway down the aisle — walking towards each other, finally ready to share our new last names, and knowing that all the little steps brought us there.</p><p>And I dream of holding your pretty little hand in labour, staying beside you as we welcome our final blessing into the world. I want to be there for the big, life-changing moments and the quiet ones after, too. I want us to look at the family we’ve built and know we chose this life, together.</p><p class="muted">These aren’t just pretty ideas to me, beba. They’re pieces of the future I hope we get to hold in our hands. 💛</p></div></div>
-</section>
-<section id="love-notes">
-<h2 class="section-title"><span>💌</span> Little notes from me</h2>
-<div class="grid"><div class="card"><h3>Open a note ✉️</h3><p>Tap a heart to open a little message.</p><div class="button-row"><button onclick="openNote(0)">💗</button><button class="secondary" onclick="openNote(1)">💜</button><button class="mint" onclick="openNote(2)">💛</button><button onclick="openNote(3)">💖</button></div><div class="result" id="note-result" aria-live="polite">Psst… there are kind words waiting for you.</div></div>
-<div class="card"><div class="emoji">💛</div><h3>A little letter for my beba</h3><p>My beba, I made this little world because I want you to have somewhere that feels like a hug from me — a tiny place that says, even when I can’t find the perfect words, my heart is full of you. Your favourite yellow is everywhere like your sunshine, with a little teal from me tucked into our world.</p><p>I love the way you treat me. I love the step mum you are and the love you give my kids. And I love that you feel like my human medicine — that somehow, being close to you can quiet my anxiety and make everything inside me feel a little more okay. You bring me comfort in a way that means more than I can explain. I never want you to think I take that, or you, for granted.</p><p>I love the ridiculous memories, like throwing boogy bombs at each other in Fortnite, and the closeness we share in our deep moments and crazy make-out sessions. I treasure our three-month anniversary in Bali, and I want to keep making memories with you — the silly ones, the romantic ones, and the ones we’ll talk about for years.</p><p>When I picture our future, I picture meeting you halfway down the aisle so we can finally have our new last names, and holding your pretty little hand in labour as we welcome our final blessing. I picture choosing you through every chapter, building our family and making a life that feels like ours.</p><p>And through every version of us, I want you to remember our little promise: <b>Always. All ways.</b> On the easy days, on the messy days, when we’re laughing until we can’t breathe, and when life asks more of us. I want to keep showing you that my love is not only something I say — it’s something I choose to put care and effort into, again and again.</p><p>Volim te, beba. You are my sunshine, my comfort, my favourite kind of chaos, and the person I want beside me for all the chapters still to come. 💛🩵</p><div class="note">💌 Made from the little pieces of our story — and all the ones still waiting for us.</div></div></div>
-</section>
-<section id="croatian">
-<h2 class="section-title"><span>🇭🇷</span> Croatian corner</h2>
-<div class="grid"><div class="card"><h3>Flip a phrase</h3><p>Learn a little Croatian one card at a time.</p><div class="result" id="phrase-card" style="font-size:1.2rem;text-align:center">Bok! 👋</div><div class="button-row"><button onclick="nextPhrase()">Next phrase</button><button class="secondary" onclick="flipPhrase()">Show translation</button></div><div id="phrase-hint" class="muted" style="margin-top:10px">Tap “Show translation” to reveal the meaning.</div></div>
-<div class="card"><h3>Quick match quiz</h3><p id="cro-question">What does “Hvala” mean?</p><div class="choice-list" id="cro-choices"></div><div id="cro-result" class="result" aria-live="polite"></div><button onclick="newCroQuiz()">New question</button></div></div>
-</section>
-<section id="boredom">
-<h2 class="section-title"><span>🎲</span> I'm bored! button</h2>
-<div class="card" style="text-align:center"><div class="emoji">🎡</div><h3>Let's find something to do</h3><p>Tap the button for a random mini challenge. Skip anything you don't feel like doing!</p><button onclick="randomChallenge()">🎲 Surprise me!</button><div class="result" id="challenge-result" aria-live="polite">Your next tiny adventure is one tap away.</div></div>
-</section>
-<section id="world">
-<h2 class="section-title"><span>🌍</span> Your tiny virtual world</h2>
-<div class="grid"><div class="card"><h3>Look after your little buddy</h3><p class="muted">Feed, cuddle and play with your virtual friend. Each action adds a little happiness.</p><div class="pet-room"><div><div class="pet" id="pet-face">🐰</div><b id="pet-name">Bubbles</b><p id="pet-mood">Bubbles is happy to see you!</p></div></div><div class="button-row" style="justify-content:center;margin-top:12px"><button onclick="petAction('feed')">🥕 Feed</button><button class="secondary" onclick="petAction('cuddle')">🫶 Cuddle</button><button class="mint" onclick="petAction('play')">🧶 Play</button></div><div class="result" id="pet-result" aria-live="polite">Happiness: <span id="happiness">3</span>/5 💕</div></div>
-<div class="card"><h3>Make a wish 🌟</h3><p>Write a tiny wish for the future. It stays in this browser on this device.</p><input id="wish-input" class="field" placeholder="One day I'd love to…"><button onclick="saveWish()">Save my wish ✨</button><div id="wish-list" style="margin-top:12px"></div></div></div>
-</section>
-<div class="footer">Made with a whole lot of love <span class="heart">💖</span><br><span class="tiny">A tiny world for my beba · your sunshine yellow and my teal, wrapped in love ✨</span><p class="tiny">Privacy note: anything you type is stored only in this browser on this device. This static site has no account or private server, so don't enter passwords or sensitive information. Anyone with the website link can open it.</p></div>
-</main>
-<script>
-const $=id=>document.getElementById(id);
-function goTo(id,btn){$(id).scrollIntoView({behavior:'smooth'});document.querySelectorAll('nav button').forEach(b=>b.classList.remove('active'));if(btn)btn.classList.add('active')}
-const quiz=[
- {q:"What's the best kind of date?",a:["A cosy night together","A big adventure","Food and lots of laughs"],right:0,why:"Cosy time together can be pretty special. 💗"},
- {q:"What makes a little moment unforgettable?",a:["A perfect photo","Feeling loved and understood","Spending lots of money"],right:1,why:"Exactly — it's the feeling that makes it memorable. 💞"},
- {q:"Choose your relationship superpower:",a:["Making each other laugh","Reading minds","Always agreeing"],right:0,why:"Making each other laugh is a very good superpower. 😂"},
- {q:"What should you do when you're bored?",a:["Stare at the ceiling","Try a tiny adventure","Declare boredom forever"],right:1,why:"A tiny adventure it is! ✨"}
-];let qi=-1;
-function startQuiz(){qi=(qi+1)%quiz.length;let q=quiz[qi];$('quiz-question').innerHTML='<b>'+q.q+'</b>';$('quiz-choices').innerHTML='';q.a.forEach((a,i)=>{let b=document.createElement('button');b.textContent=a;b.onclick=()=>{$('quiz-result').textContent=(i===q.right?'Correct-ish! 💖 ':'Good answer! 💕 ')+q.why};$('quiz-choices').appendChild(b)});$('quiz-result').textContent='Pick the answer that feels right!'}
-let seq=[];function showSequence(){let all=['💖','🌈','🐸','🍓','🌟','🦋','🍕','🐰'];seq=Array.from({length:3+Math.floor(Math.random()*2)},()=>all[Math.floor(Math.random()*all.length)]);$('memory-sequence').textContent=seq.join(' ');$('memory-answer').value='';$('memory-result').textContent='Memorise it, then tap Check.'}
-function checkSequence(){let val=$('memory-answer').value.replace(/\s/g,'');if(!seq.length){$('memory-result').textContent='Show a sequence first!';return}$('memory-result').textContent=val===seq.join('')?'Perfect memory! 🧠✨':'Not quite — try again, or show a new sequence!'}
-const doors=["You deserve a little treat today. 🍓","A tiny reminder: you are loved. 💖","A magical sparkle has found you. ✨"];
-function door(n){$('door-result').textContent=doors[n]+' (Every door was lucky!)'}
-function mystery(name){$('mystery-result').textContent=name==='Poppy'?'Correct! 🐶 Pink icing on her nose — case solved!':'Good guess! Check the clues again. Who has pink icing on their nose?'}
-const notes=["Beba, your yellow sunshine has a home in my heart. Thank you for the way you treat me and for being such a beautiful step mum. I see you, I appreciate you, and I love you. 💛","You feel like my human medicine. When my anxiety is loud, being close to you can help the world feel softer. I never want you to doubt how much that comfort means to me. 🩵","From Fortnite boogy bombs to our three-month anniversary in Bali, I love that we have memories that are silly, sweet, and completely ours. I want a lifetime more with you. 🌴🎮","Always. All ways. I dream of meeting you halfway down the aisle with our new last names ahead of us, then holding your pretty little hand as we welcome our final blessing. Volim te, beba. 💍🤍"];
-function openNote(i){$('note-result').textContent=notes[i]}
-const phrases=[["Bok!","Hello! / Hi!"],["Hvala","Thank you"],["Molim","Please / You're welcome"],["Volim te","I love you"],["Kako si?","How are you?"],["Nedostaješ mi","I miss you"],["Laku noć","Good night"],["Dobro jutro","Good morning"],["Sretno!","Good luck!"],["Vidimo se","See you"]];
-let pi=0,shown=false;function renderPhrase(){$('phrase-card').textContent=phrases[pi][0];$('phrase-hint').textContent='Tap “Show translation” to reveal the meaning.';shown=false}
-function nextPhrase(){pi=(pi+1)%phrases.length;renderPhrase()}function flipPhrase(){shown=!shown;$('phrase-card').textContent=shown?phrases[pi][1]:phrases[pi][0];$('phrase-hint').textContent=shown?'Croatian phrase: '+phrases[pi][0]:'Tap “Show translation” to reveal the meaning.'}
-const cro=[{q:'What does “Hvala” mean?',a:['Thank you','Good night','I miss you'],r:0},{q:'What does “Volim te” mean?',a:['Good morning','I love you','Please'],r:1},{q:'What does “Bok” mean?',a:['Hello / bye','Sorry','Good luck'],r:0},{q:'What does “Laku noć” mean?',a:['See you','How are you?','Good night'],r:2}];let ci=0;
-function newCroQuiz(){ci=(ci+1)%cro.length;let q=cro[ci];$('cro-question').textContent=q.q;$('cro-choices').innerHTML='';q.a.forEach((a,i)=>{let b=document.createElement('button');b.textContent=a;b.onclick=()=>{$('cro-result').textContent=i===q.r?'Bravo! Correct! 🇭🇷✨':'Not quite — try another one!';};$('cro-choices').appendChild(b)});$('cro-result').textContent='Choose your answer.'}
-const challenges=["Find a song that matches your mood and listen to it all the way through. 🎧","Draw a tiny frog in 60 seconds. 🐸","Make up a new name for a cloud. ☁️","Send someone a kind message. 💌","Learn one Croatian phrase and say it out loud. 🇭🇷","Find five things nearby that are your favourite colour. 🌈","Invent a new ice-cream flavour. 🍦","Stretch, drink some water and take three deep breaths. 💧","Write down one thing you want to do this month. ✨","Make a 3-song mini playlist for your current mood. 🎶","Do a silly dance for one whole song. 💃","Come up with a name for a pet dragon. 🐉","Take a photo of something that makes you smile. 📸","Solve the cupcake mystery above without peeking at the answer. 🕵️","Build the cosiest imaginary blanket fort in your mind. 🏰"];
-function randomChallenge(){let old=$('challenge-result').dataset.last;let n;do{n=Math.floor(Math.random()*challenges.length)}while(String(n)===old);$('challenge-result').dataset.last=n;$('challenge-result').textContent=challenges[n]}
-let happiness=3;function petAction(a){happiness=Math.min(5,happiness+1);if(a==='feed'){$('pet-face').textContent='🐰🥕';$('pet-mood').textContent='Bubbles enjoyed a crunchy carrot!'}if(a==='cuddle'){$('pet-face').textContent='🥹🐰';$('pet-mood').textContent='Bubbles feels safe and loved.'}if(a==='play'){$('pet-face').textContent='🐰🧶';$('pet-mood').textContent='Bubbles is having the best time!'}$('happiness').textContent=happiness;$('pet-result').innerHTML='Happiness: <span id="happiness">'+happiness+'</span>/5 '+(happiness===5?'🌟 Max happiness!':'💕')}
-function readStore(key){try{return JSON.parse(localStorage.getItem(key)||'[]')}catch(e){return []}}
-function writeStore(key,val){try{localStorage.setItem(key,JSON.stringify(val));return true}catch(e){alert('Your browser could not save this. Check that private browsing/storage is not blocked.');return false}}
-function addMemory(){let title=$('memory-title').value.trim(),body=$('memory-text').value.trim();if(!title||!body){alert('Add a title and a little memory first 💗');return}let items=readStore('mlw_memories');items.unshift({title,body});if(writeStore('mlw_memories',items)){ $('memory-title').value='';$('memory-text').value='';renderMemories()}}
-function renderMemories(){let el=$('saved-memories'),items=readStore('mlw_memories');el.innerHTML='';if(!items.length){el.innerHTML='<p class="muted">Your memory jar is waiting for its first memory. 🌷</p>';return}items.forEach((m,i)=>{let d=document.createElement('div');d.className='memory';let b=document.createElement('b');b.textContent=m.title;let p=document.createElement('p');p.textContent=m.body;p.style.margin='5px 0';let del=document.createElement('button');del.className='small secondary';del.textContent='Remove';del.onclick=()=>{let a=readStore('mlw_memories');a.splice(i,1);writeStore('mlw_memories',a);renderMemories()};d.append(b,p,del);el.appendChild(d)})}
-function saveWish(){let v=$('wish-input').value.trim();if(!v){alert('Write a little wish first 🌟');return}let a=readStore('mlw_wishes');a.unshift(v);if(writeStore('mlw_wishes',a)){$('wish-input').value='';renderWishes()}}
-function renderWishes(){let el=$('wish-list');el.innerHTML='';readStore('mlw_wishes').forEach((w,i)=>{let d=document.createElement('div');d.className='memory';let t=document.createElement('span');t.textContent='🌟 '+w;let b=document.createElement('button');b.className='small secondary';b.textContent='×';b.style.float='right';b.setAttribute('aria-label','Remove wish');b.onclick=()=>{let a=readStore('mlw_wishes');a.splice(i,1);writeStore('mlw_wishes',a);renderWishes()};d.append(t,b);el.appendChild(d)})}
-startQuiz();newCroQuiz();renderMemories();renderWishes();
-</script>
-</body>
-</html>
+🌈 Martina's Little World
+yellow sunshine for you ☀️ · teal for us 💚
+✨ 🦋 🌷 ✨
+Hi, Martina, beba! 💛
+A little corner of the internet made with love for you, beba — full of tiny adventures, sweet memories, secret notes and reminders that you are so loved.
+🎮 Let's play
+💌 Find a little note
+Made especially for you. Explore at your own pace ✨
+🎮 Games
+🕵️ Mystery
+📸 Memories
+💌 Secret notes
+🇭🇷 Croatian
+🎲 Boredom
+🌍 My world
+🎮
+Play corner
+💘
+How well do you know your person?
+A cute little relationship quiz.
+
+Ready when you are! 💗
+Start / next question
+🧠
+Emoji memory
+Remember this little sequence, then type it back using the emojis.
+Tap “Show sequence” to begin.
+Show sequence
+Check
+
+🍀
+Pick a lucky door
+Three doors. One has a tiny surprise. Choose one!
+🚪 1
+🚪 2
+🚪 3
+Your adventure awaits…
+🕵️
+The tiny mystery room
+🔎
+The case of the missing cupcake
+A cupcake vanished from the kitchen. Three suspects were nearby. Read the clues and solve the case!
+Clue 1: Mia was outside watering flowers — and her shoes were muddy.
+Clue 2: Leo was in the living room. There are crumbs on the sofa, but they are biscuit crumbs.
+Clue 3: Poppy the puppy has pink icing on her nose and is hiding behind the table.
+Who took the cupcake?
+🌷 Mia
+🧢 Leo
+🐶 Poppy
+
+Reveal answer
+📸
+Our memory jar — our always, all ways
+Little things worth keeping
+Add your own favourite memories. These stay saved in this browser on this device.
+Add to the jar 💗
+
+💛🩵
+For my beba — our little story
+Beba, I want us to keep the little things too: the laughs, the silly moments, the deep, intense moments we share, our crazy make-out sessions, and the ordinary days that feel brighter because we share them. You matter to me in ways that are hard to fit into one message.
+Yellow is your sunshine, teal is my little touch, and this tiny world is a place to keep adding pieces of our story. 💛
+✨ Memory ideas: a moment that made you laugh, a song that reminds you of each other, a time you felt cared for, or something you can’t wait to do together. Add your real memories in the jar.
+🎮💣😂
+The Fortnite boogy-bomb era
+Remember when we used to throw boogy bombs at each other in Fortnite? 😂 Such a silly little memory, but it’s ours — the kind of ridiculous moment that still belongs in our story. If love had a highlight reel, this would absolutely make the cut.
+Our Bali chapter 🌴
+Our three-month anniversary in Bali — a little milestone in a place that will always mean something special in our story.
+Always. All ways. 💛🩵
+Two little words that say so much. Not just always when life is easy, but all ways: in the laughter, the hard days, the growing, the choosing each other, and every version of the future we build together.
+💍🤍
+The future I dream of with you
+One day, I dream of meeting you halfway down the aisle — walking towards each other, finally ready to share our new last names, and knowing that all the little steps brought us there.
+And I dream of holding your pretty little hand in labour, staying beside you as we welcome our final blessing into the world. I want to be there for the big, life-changing moments and the quiet ones after, too. I want us to look at the family we’ve built and know we chose this life, together.
+These aren’t just pretty ideas to me, beba. They’re pieces of the future I hope we get to hold in our hands. 💛
+💌
+Little notes from me
+Open a note ✉️
+Tap a heart to open a little message.
+💗
+💜
+💛
+💖
+Psst… there are kind words waiting for you.
+💛
+A little letter for my beba
+My beba, I made this little world because I want you to have somewhere that feels like a hug from me — a tiny place that says, even when I can’t find the perfect words, my heart is full of you. Your favourite yellow is everywhere like your sunshine, with a little teal from me tucked into our world.
+I love the way you treat me. I love the step mum you are and the love you give my kids. And I love that you feel like my human medicine — that somehow, being close to you can quiet my anxiety and make everything inside me feel a little more okay. You bring me comfort in a way that means more than I can explain. I never want you to think I take that, or you, for granted.
+I love the ridiculous memories, like throwing boogy bombs at each other in Fortnite, and the closeness we share in our deep moments and crazy make-out sessions. I treasure our three-month anniversary in Bali, and I want to keep making memories with you — the silly ones, the romantic ones, and the ones we’ll talk about for years.
+When I picture our future, I picture meeting you halfway down the aisle so we can finally have our new last names, and holding your pretty little hand in labour as we welcome our final blessing. I picture choosing you through every chapter, building our family and making a life that feels like ours.
+And through every version of us, I want you to remember our little promise: Always. All ways. On the easy days, on the messy days, when we’re laughing until we can’t breathe, and when life asks more of us. I want to keep showing you that my love is not only something I say — it’s something I choose to put care and effort into, again and again.
+Volim te, beba. You are my sunshine, my comfort, my favourite kind of chaos, and the person I want beside me for all the chapters still to come. 💛🩵
+💌 Made from the little pieces of our story — and all the ones still waiting for us.
+🇭🇷
+Croatian corner
+Flip a phrase
+Learn a little Croatian one card at a time.
+Bok! 👋
+Next phrase
+Show translation
+Tap “Show translation” to reveal the meaning.
+Quick match quiz
+What does “Hvala” mean?
+
+New question
+🎲
+I'm bored! button
+🎡
+Let's find something to do
+Tap the button for a random mini challenge. Skip anything you don't feel like doing!
+🎲 Surprise me!
+Your next tiny adventure is one tap away.
+🌍
+Your tiny virtual world
+Look after your little buddy
+Feed, cuddle and play with your virtual friend. Each action adds a little happiness.
+🐰
+Bubbles
+Bubbles is happy to see you!
+🥕 Feed
+🫶 Cuddle
+🧶 Play
+Happiness: 3/5 💕
+Make a wish 🌟
+Write a tiny wish for the future. It stays in this browser on this device.
+Save my wish ✨
+
+Made with a whole lot of love 💖
+A tiny world for my beba · your sunshine yellow and my teal, wrapped in love ✨
+Privacy note: anything you type is stored only in this browser on this device. This static site has no account or private server, so don't enter passwords or sensitive information. Anyone with the website link can open it.
